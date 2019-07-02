@@ -6,4 +6,4 @@ before_install:
   - docker build -t qvbit/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run qvbit/docker-react npm run test -- --coverage
+  - docker run -e CI=true qvbit/docker-react npm run test
